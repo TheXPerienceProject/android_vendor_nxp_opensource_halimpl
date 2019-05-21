@@ -31,6 +31,7 @@
 #define NCI_VERSION_1_1 0x11
 #define NCI_VERSION_1_0 0x10
 #define NCI_VERSION_UNKNOWN 0x00
+#define SN100_CHIPID "0xa4"
 
 /* Uncomment define ENABLE_ESE_CLIENT to
 enable eSE client */
@@ -191,6 +192,7 @@ void phNxpNciHal_initializeRegRfFwDnld();
 void phNxpNciHal_deinitializeRegRfFwDnld();
 #if(NXP_EXTNS == true)
 NFCSTATUS phNxpNciHal_PropEsePowerCycle(void);
+void phNxpNciHal_getNxpConfig(nfc_nci_IoctlInOutData_t *pInpOutData);
 #endif
 /*set config management*/
 
