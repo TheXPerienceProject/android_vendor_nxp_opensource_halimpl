@@ -1,4 +1,5 @@
 # Enable build support for NFC open source vendor modules
+ifneq ($(TARGET_DEVICE),miatoll)
 ifeq ($(call is-board-platform-in-list, sdm845 sdm710 msmnile $(MSMSTEPPE) $(TRINKET) kona lito bengal atoll),true)
 TARGET_USES_NQ_NFC := true
 endif
@@ -21,3 +22,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += $(NQ_VENDOR_NFC)
 endif
 
+endif #disable for miatoll
